@@ -1,0 +1,885 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+}
+
+section{
+    padding: 50px 100px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    z-index: 999999;
+}
+
+header .logo{
+    font-family: 'Oswald', sans-serif;
+    color: #A4161A ;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+
+header .logo:hover{
+    color: #E5383B;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li ul{
+    position: absolute;
+    left: 0;
+    background: #ffffff;
+    display: none;
+    padding-bottom: 5px;
+    z-index: 1;
+}
+
+header ul li:hover ul{
+    display: block;
+}
+
+header ul li ul li{
+    display: block;
+    width: 150px;
+}
+
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #111111;
+}
+
+header ul li a:hover{
+    background: #A4161A;
+    color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+header ul li .activa{
+    color:#E5383B;
+}
+
+.slider{
+    margin-top: 85px;
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #A4161A;
+}
+
+.slider .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0s;
+    z-index: 1;
+    clip-path: circle(0px at center);
+}
+
+.slider input[type="radio"]:checked + .imgBx{
+    z-index: 10;
+    clip-path: circle(1000px at center);
+    transition-delay: 0.75s;
+}
+
+.slider .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .imgBx .texto{
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+}
+
+.slider .imgBx .texto h2{
+    font-size: 4em;
+    color: #ffffff;
+}
+
+.slider .imgBx .texto p{
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.slider input[type="radio"]{
+    position: relative;
+    z-index: 500;
+    margin: 5px;
+    margin-bottom: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.slider .btn{
+    background: #660708
+    ;
+}
+
+
+.banner{
+    position: relative;
+    min-height: 50vh;
+    margin-top: 80px;
+    padding: 0 20%;
+    background: #A4161A;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 2s;
+    animation: fondo 20s ease-in-out infinite;
+}
+
+.banner.mensj{
+    background: #E5383B;
+}
+
+.banner h2{
+    margin-bottom: 15px;
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.banner h2 span{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.banner h3{
+    margin-top: 5px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.btn{
+    position: relative;
+    background:  #A4161A;
+    display: inline-block;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: #F5F3F4;
+    color: #A4161A;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111111;
+}
+
+.heading h2{
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.heading p{
+    margin: 35px 150px;
+}
+
+.nosotros{
+    background: #F5F3F4;
+}
+
+.nosotros .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.nosotros .content .nosotrosBX{
+    padding-bottom: 15px;
+    text-align: center;
+    background: #ffffff;
+    color: #111111;
+    max-width: 340px;
+    margin: 15px;
+    transition: 0.5s;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform: translateY(0) translatez(0);
+}
+
+.nosotros .content .nosotrosBX:hover{
+    box-shadow: 5px 10px 20px 10px #a4161b75;
+}
+
+
+
+.nosotros .content .nosotrosBX h2{
+    padding: 50px;
+    background: #A4161A;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    z-index: 1;
+    transition: 0.7s;
+    box-shadow: 0 0 0 0 #A4161A;
+}
+.nosotros .content .nosotrosBX:hover h2{
+    box-shadow: 0 0 0 400px #A4161A;
+    background: #ffffff;
+    color:black;
+}
+
+.nosotros .content .nosotrosBX p{
+    text-align: left;
+    padding: 10px 25px;
+    z-index: 2;
+    transition: 1s;
+}
+.nosotros .content .nosotrosBX:hover p{
+    z-index: 2;
+    color: #ffffff;
+}
+
+
+.terapias .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.terapias .activo{
+    filter: blur(20%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.terapias .content .contentBx{
+    padding: 0 30px;
+}
+
+.terapias .content .contentBx h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20%;
+}
+.terapias .content .servi .contentBx h3{
+    margin-top: 20px;
+}
+
+.terapias .content .w50{
+    min-width: 50%;
+}
+
+.terapias .content .imgPhoto{
+    max-width: 100%;
+}
+
+.metodo{
+        background: #F5F3F4;
+}
+
+.metodo .content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+}
+
+.metodo .content .nosotrosBX{
+    text-align: center;
+    padding-bottom: 15px;
+    background: #ffffff;
+    color: #111111;
+    max-width: 340px;
+    margin: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.metodo .content .nosotrosBX .icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #A4161A;
+    box-shadow: 0 0 0 0 #A4161A;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 0;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.metodo .content .nosotrosBX:hover .icon{
+    box-shadow: 0 0 0 600px #A4161A;
+ 
+}
+
+.metodo .content .nosotrosBX .icon h1{
+    font-size: 40px;
+
+}
+
+.metodo .content .nosotrosBX h2,
+.metodo .content .nosotrosBX p{
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+    padding: 0 25px;
+}
+.metodo .content .nosotrosBX h2{
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    z-index: 2;
+}
+.metodo .content .nosotrosBX p{
+    text-align: left;
+    padding-bottom: 25px;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.metodo .content .nosotrosBX:hover h2,
+.metodo .content .nosotrosBX:hover p{
+    color: #ffffff;
+}
+
+.metodo .btn{
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   margin-top: 50px;
+}
+
+
+
+.testimonial{
+    padding: 35px 50px;
+    margin: 0 20px 30px;
+    border-radius: 0 70px 0 70px;
+    border: 5px solid #A4161A;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+.testimonial .pic{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.testimonial .title{
+    display: block;
+    margin: 0 0 7px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.testimonial .post{
+    display: block;
+    font-size: 15px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.testimonial .description{
+    padding: 0 25%;
+    font-size: 16px;
+    color: black;
+    line-height: 30px;
+}
+.owl-theme .owl-controls{ margin-top: 0; }
+.owl-theme .owl-controls .owl-page span{
+    background: #F5F3F4;
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+.owl-theme .owl-controls .owl-page.active span{ background: #A4161A; }
+
+
+
+.contacto{
+    position: relative;
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto .contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background: #F5F3F4;
+}
+
+.contacto .contenedor .info-contacto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.contacto .contenedor .info-contacto .box-contact{
+    position: relative;
+    display: flex;
+    padding: 20px 0;
+}
+
+.contacto .contenedor .info-contacto .box-contact .icono-contact{
+    min-width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    background: #A4161A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.contacto .contenedor .info-contacto .box-contact .icono-contact i{
+    filter: invert(1);
+}
+.contacto .contenedor .info-contacto .box-contact .texto-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario{
+    width: 50%;
+    padding: 40px;
+    background:  #A4161A;
+    color: #ffffff;
+}
+
+.formulario .intputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.formulario .intputBox input,
+.formulario .intputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    resize: none;
+}
+
+.formulario .intputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.formulario .intputBox input:focus ~ span,
+.formulario .intputBox input:valid ~ span,
+.formulario .intputBox textarea:focus ~ span,
+.formulario .intputBox textarea:valid ~ span{
+    font-size: 12px;
+    transform: translateY(-20px);
+    color: #F5F3F4;
+}
+/*.formulario .intputBox input[type="submit"],*/
+button {
+    position: relative !important;
+    width: 50% !important;
+    background:  #E5383B !important;
+    display: inline-block !important;
+    color: #ffffff !important;
+    margin-top: 10px !important;
+    padding: 10px 30px !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    border: none !important;
+    letter-spacing: 2px !important;
+    font-weight: 500 !important;
+    border-bottom: none !important;
+    cursor: pointer !important;
+    transition: 0.5s !important;
+}
+/*.formulario .intputBox input[type="submit"]:hover,*/
+button:hover{
+    background: #F5F3F4;
+    color: #A4161A;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+*:before,*:after{
+    box-sizing: border-box;
+}
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px 50px 10px;
+    background: #A4161A;
+    color: #ffffff;
+}
+
+footer > * {
+    flex: 1 100%;
+}
+
+footer h3{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+footer .logo-footer{
+        font-family: 'Oswald', sans-serif;
+        font-size: 32px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 700;
+}
+footer p,
+footer ul li{
+    font-size: 15px;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+footer li{
+    line-height: 2em;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+footer p a {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+footer .footer-izq{
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+footer .footer-izq p{
+    padding-right: 20%;
+}
+
+footer .footer-der{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-der > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+footer .footer-abajo{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.covid{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 50px 150px;
+}
+.covid ul{
+    list-style: none;
+}
+
+.covid ul li{
+    padding: 10px 0;
+}
+
+.geist{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+
+@media screen and (min-width: 600px){
+    .footer-izq {
+        flex: 1 0px;
+    }
+    .footer-der > *{
+        flex: 1;
+    }
+    .footer-der{
+        flex: 2 0px;
+    }
+}
+
+/* ----- RESPONSIVO ------- */
+
+@media (max-width: 991px){
+    section{
+        padding: 15px 10px;
+    }
+
+    .heading{
+        margin-bottom: 5px;
+    }
+
+    .heading h2{
+        letter-spacing: 0;
+    }
+    .heading p {
+        margin: 35px 20px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .heading p br{
+        display: none;
+    }
+    header{
+        padding: 10px 50px;
+        z-index: 1000;
+        position: fixed;
+    }
+    .menu{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        display: block;
+        padding: 50px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .menu.active{
+        left: 0;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(img/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        filter: invert(1);
+        transition: 0.2s;
+    }
+    .toggle.active{
+        background: url(img/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        filter: invert(1);
+        cursor: pointer;
+    }
+    header ul li a{
+        font-size: 16px;
+    }
+   
+    header ul li:hover ul{
+        position: relative;
+    }
+    header ul li ul li{
+        width: 100%;
+    }
+    header ul li ul li a{
+        font-weight: 400;
+    }
+
+    .slider{
+        margin-top: 0px;
+        min-height: 100vh;
+    }
+    .slider .imgBx {
+        padding: 20px;
+    }
+
+    .slider .imgBx .texto h2{
+        font-size: 2.5em;
+    }
+
+    .banner {
+        margin-top: 60px;
+        
+        padding: 0;
+    }
+
+    .banner h2{
+        font-size: 32px;
+    }
+
+    .banner .textBx{
+        padding: 15px;
+        text-align: center;
+    }
+
+    .terapias .content .w50{
+        padding: 15px;
+    }
+
+    .terapias .content .servi .w50{
+        background:  #ffffff;
+    }
+
+    .terapias .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    #adolescentes{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .terapias .content .contentBx h3 {
+        margin-top: 20px;
+    }
+
+    .terapias .content .contentBx p{
+        text-align: left;
+    }
+
+    .testimonial .description {
+        padding: 0;
+    }
+
+    .testimonial{
+        padding: 35px 0px;
+    }
+
+    .contacto .contenedor {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .contacto .contenedor .info-contacto {
+        width: 85%;
+        padding-left: 0;
+    }
+
+    .contacto .contenedor .formulario{
+        width: 100%;
+    }
+
+    footer{
+        padding: 15px 50px;
+    }
+
+    .covid{
+        padding: 50px;
+    }
+}
+
+@media (max-width: 527px){
+    .formulario .intputBox input[type="submit"],
+    button{
+        width: 50%;
+    }
+}
